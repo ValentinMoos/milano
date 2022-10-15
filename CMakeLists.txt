@@ -2,10 +2,10 @@
 cmake_minimum_required( VERSION 3.0 )
 
 # project name
-project(milano2)
+project(milano)
 
 # target
-add_executable( milano2 milano2.cc )
+add_executable( milano milano.cc )
 
 # external libs
 #find_package(Ceres REQUIRED)
@@ -20,12 +20,12 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -I/home/mov57924/Dokumente/Py
 #find_package(Ceres REQUIRED PATHS "/home/mov57924/installations") #if the install directory is not in your PATH
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -I/home/mov57924/installations/include -L/home/mov57924/installations/lib -laux")
 
-target_include_directories(milano2
+target_include_directories(milano
   PRIVATE
     ${CERES_INCLUDE_DIRS}
 )
 
-target_link_libraries(milano2
+target_link_libraries(milano
   PRIVATE
     ${CERES_LIBRARIES}
 )
